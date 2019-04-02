@@ -15,4 +15,5 @@ class User {
     var desc: String?          // User Description
     var favorited = false      // Check user is favorited
     
+
 }
