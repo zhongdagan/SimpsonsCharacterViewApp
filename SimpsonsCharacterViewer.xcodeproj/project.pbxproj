@@ -29,8 +29,8 @@
 		FC86D3282251334100CD9E51 /* CollectionViewDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D320225124A100CD9E51 /* CollectionViewDelegateHandler.swift */; };
 		FC86D32F2252842300CD9E51 /* WireCharacterViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC86D32E2252842300CD9E51 /* WireCharacterViewer-Info.plist */; };
 		FC86D3312253BA3000CD9E51 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D3302253BA3000CD9E51 /* Root.swift */; };
-		FC86D3352253BF6000CD9E51 /* NOTES.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FC86D3342253BF6000CD9E51 /* NOTES.rtf */; };
-		FC86D3362253BF6000CD9E51 /* NOTES.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FC86D3342253BF6000CD9E51 /* NOTES.rtf */; };
+		FC86D3382253C38E00CD9E51 /* NOTES.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FC86D3372253C38D00CD9E51 /* NOTES.rtf */; };
+		FC86D3392253C38E00CD9E51 /* NOTES.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FC86D3372253C38D00CD9E51 /* NOTES.rtf */; };
 		FC9EBFDA224FADBC005BFD29 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241BB224F227F005B65EA /* User.swift */; };
 		FC9EBFDB224FADBC005BFD29 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62417F224F1CB3005B65EA /* DetailViewController.swift */; };
 		FC9EBFDC224FADBC005BFD29 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241BF224F254E005B65EA /* UserViewModel.swift */; };
@@ -95,7 +95,7 @@
 		FC86D3222251266600CD9E51 /* CollectionViewDataSourceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceHandler.swift; sourceTree = "<group>"; };
 		FC86D32E2252842300CD9E51 /* WireCharacterViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WireCharacterViewer-Info.plist"; sourceTree = "<group>"; };
 		FC86D3302253BA3000CD9E51 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
-		FC86D3342253BF6000CD9E51 /* NOTES.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = NOTES.rtf; path = ../../../Desktop/NOTES.rtf; sourceTree = "<group>"; };
+		FC86D3372253C38D00CD9E51 /* NOTES.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = NOTES.rtf; sourceTree = "<group>"; };
 		FC9EBFEE224FADBC005BFD29 /* WireCharacterViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WireCharacterViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9EBFF3225072CD005BFD29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC9EBFF4225072D0005BFD29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 		FC62416F224F1CB3005B65EA = {
 			isa = PBXGroup;
 			children = (
-				FC86D3342253BF6000CD9E51 /* NOTES.rtf */,
+				FC86D3372253C38D00CD9E51 /* NOTES.rtf */,
 				FC62417A224F1CB3005B65EA /* SimpsonsCharacterViewer */,
 				FC624191224F1CB6005B65EA /* SimpsonsCharacterViewerTests */,
 				FC62419C224F1CB6005B65EA /* SimpsonsCharacterViewerUITests */,
@@ -457,7 +457,7 @@
 				FC624185224F1CB6005B65EA /* Assets.xcassets in Resources */,
 				FC624183224F1CB3005B65EA /* Main.storyboard in Resources */,
 				FC86D32F2252842300CD9E51 /* WireCharacterViewer-Info.plist in Resources */,
-				FC86D3352253BF6000CD9E51 /* NOTES.rtf in Resources */,
+				FC86D3382253C38E00CD9E51 /* NOTES.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +479,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC86D3362253BF6000CD9E51 /* NOTES.rtf in Resources */,
+				FC86D3392253C38E00CD9E51 /* NOTES.rtf in Resources */,
 				FC9EBFF6225072E9005BFD29 /* LaunchScreen.storyboard in Resources */,
 				FC9EBFF5225072D4005BFD29 /* Assets.xcassets in Resources */,
 				FC9EBFE9224FADBC005BFD29 /* Main.storyboard in Resources */,
