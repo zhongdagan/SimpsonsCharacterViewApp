@@ -9,11 +9,11 @@
 import Foundation
 import Alamofire
 
-class APIHandler: NSObject {
+class APIHandler {
     
     // Setup APIHandler as a Singleton class
     static let sharedInstance = APIHandler()
-    private override init() {}
+    private init() {}
     
     // Using Alomafire make web service call and parse JSON data with codable
     func fetchUsers(with completionHandler: @escaping ([User], Error?) -> ()) {
@@ -31,7 +31,7 @@ class APIHandler: NSObject {
                             user.title = textTuple.0
                             user.desc = textTuple.1
                             user.imgURLString = item.Icon.URL
-                            if defaults.object(forKey: textTuple.0) != nil{
+                            if defaults.object(forKey: user.title!) != nil{
                                 user.favorited = true
                             } else {
                                 user.favorited = false
