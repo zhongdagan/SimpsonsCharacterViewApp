@@ -29,7 +29,7 @@
 		FC86D3242251266600CD9E51 /* CollectionViewDataSourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D3222251266600CD9E51 /* CollectionViewDataSourceHandler.swift */; };
 		FC86D3282251334100CD9E51 /* CollectionViewDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D320225124A100CD9E51 /* CollectionViewDelegateHandler.swift */; };
 		FC86D32F2252842300CD9E51 /* WireCharacterViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC86D32E2252842300CD9E51 /* WireCharacterViewer-Info.plist */; };
-		FC86D3312253BA3000CD9E51 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D3302253BA3000CD9E51 /* Root.swift */; };
+		FC86D3312253BA3000CD9E51 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D3302253BA3000CD9E51 /* Welcome.swift */; };
 		FC86D3382253C38E00CD9E51 /* NOTES.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FC86D3372253C38D00CD9E51 /* NOTES.rtf */; };
 		FC86D3392253C38E00CD9E51 /* NOTES.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FC86D3372253C38D00CD9E51 /* NOTES.rtf */; };
 		FC9EBFDA224FADBC005BFD29 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241BB224F227F005B65EA /* User.swift */; };
@@ -43,6 +43,7 @@
 		FC9EBFE9224FADBC005BFD29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC624181224F1CB3005B65EA /* Main.storyboard */; };
 		FC9EBFF5225072D4005BFD29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC9EBFF4225072D0005BFD29 /* Assets.xcassets */; };
 		FC9EBFF6225072E9005BFD29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9EBFF2225072CD005BFD29 /* LaunchScreen.storyboard */; };
+		FCFDDDF622710E7500F1101A /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D3302253BA3000CD9E51 /* Welcome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +99,7 @@
 		FC86D320225124A100CD9E51 /* CollectionViewDelegateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegateHandler.swift; sourceTree = "<group>"; };
 		FC86D3222251266600CD9E51 /* CollectionViewDataSourceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceHandler.swift; sourceTree = "<group>"; };
 		FC86D32E2252842300CD9E51 /* WireCharacterViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WireCharacterViewer-Info.plist"; sourceTree = "<group>"; };
-		FC86D3302253BA3000CD9E51 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		FC86D3302253BA3000CD9E51 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		FC86D3372253C38D00CD9E51 /* NOTES.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = NOTES.rtf; sourceTree = "<group>"; };
 		FC9EBFEE224FADBC005BFD29 /* WireCharacterViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WireCharacterViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9EBFF3225072CD005BFD29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -263,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				FC6241BB224F227F005B65EA /* User.swift */,
-				FC86D3302253BA3000CD9E51 /* Root.swift */,
+				FC86D3302253BA3000CD9E51 /* Welcome.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -646,7 +647,7 @@
 				FC6241C2224F364F005B65EA /* UserCollectionViewCell.swift in Sources */,
 				FC6241B1224F1DDE005B65EA /* APIHandler.swift in Sources */,
 				FC86D321225124A100CD9E51 /* CollectionViewDelegateHandler.swift in Sources */,
-				FC86D3312253BA3000CD9E51 /* Root.swift in Sources */,
+				FC86D3312253BA3000CD9E51 /* Welcome.swift in Sources */,
 				FC62417E224F1CB3005B65EA /* MasterViewController.swift in Sources */,
 				FC62417C224F1CB3005B65EA /* AppDelegate.swift in Sources */,
 			);
@@ -673,6 +674,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC9EBFDA224FADBC005BFD29 /* User.swift in Sources */,
+				FCFDDDF622710E7500F1101A /* Welcome.swift in Sources */,
 				FC9EBFDB224FADBC005BFD29 /* DetailViewController.swift in Sources */,
 				FC9EBFDC224FADBC005BFD29 /* UserViewModel.swift in Sources */,
 				FC9EBFDD224FADBC005BFD29 /* WireConfiguration.swift in Sources */,
@@ -858,7 +860,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DyCom.io.SimpsonsCharacterViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -876,7 +878,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DyCom.io.SimpsonsCharacterViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -976,7 +978,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.wireviewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -994,7 +996,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.wireviewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

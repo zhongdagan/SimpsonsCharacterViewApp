@@ -15,7 +15,7 @@ class APIHandler {
     static let sharedInstance = APIHandler()
     private init() {}
     
-    // Using Alomafire make web service call and parse JSON data with codable
+    // Mark: Using Alomafire make web service call and parse JSON data with codable
     func fetchUsers(with completionHandler: @escaping ([User], Error?) -> ()) {
         var userList = [User]()
         if let url = URL(string: AppConfiguration.urlString) {
