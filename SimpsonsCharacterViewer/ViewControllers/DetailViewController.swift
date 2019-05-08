@@ -14,7 +14,7 @@ class DetailViewController: BaseViewControlller {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descLbl: UILabel!
     
-    var user: User?
+    var detailViewModel: DetailViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,20 +27,20 @@ class DetailViewController: BaseViewControlller {
         // set the toolbar visiblility on different devices
         let device = UIDevice.current.userInterfaceIdiom
         if device == .phone {
-            title = user?.title
+            title = detailViewModel?.title
         } else {
             title = ""
         }
     }
     
     func setupUI() {
-        if let imgURLString = user?.imgURLString{
+        if let imgURLString = detailViewModel?.characterUrl {
             userImageView.sd_setImage(with: URL(string: imgURLString), placeholderImage: defaultImage, options: .refreshCached, completed: nil)
         }
-        if let title = user?.title {
+        if let title = detailViewModel?.title {
             titleLbl.text = title
         }
-        if let desc = user?.description {
+        if let desc = detailViewModel?.description {
             descLbl.text = desc
         }
     }

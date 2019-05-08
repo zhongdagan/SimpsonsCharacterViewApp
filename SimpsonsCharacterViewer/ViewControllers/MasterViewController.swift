@@ -88,8 +88,8 @@ extension MasterViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let detailViewController = UIStoryboard(name: Constant.mainStoryboard, bundle: nil).instantiateViewController(withIdentifier: Constant.detailViewController) as? DetailViewController else { return }
         
-        // Directly passing the user data to detail view controller since it's a very small data pass. Will be good to have a view model for detail view controller
-        detailViewController.user = viewModel?.getUserAt(index: indexPath.row)
+        let user = viewModel?.getUserAt(index: indexPath.row)
+        detailViewController.detailViewModel = DetailViewModel(title: user?.title, description: user?.description, characterUrl: user?.imgURLString)
         splitViewController?.showDetailViewController(detailViewController, sender: nil)
     }
     
