@@ -9,32 +9,13 @@
 import Foundation
 import UIKit
 
-// Customize error with Enum
-enum CustomError: Error {
-    
-    case incorrectUrl
-    case fetchError
-    case parseError
-    
-    var localizedDescription: String {
-        switch self {
-        case .incorrectUrl:
-            return "Incorrect URL"
-        case .fetchError:
-            return "Error fetching data from the API"
-        case .parseError:
-            return "Error parsing the data"
-        }
-    }
-}
-
 // Setup different API and app name
 struct AppConfiguration {
     static let urlString = "http://api.duckduckgo.com/?q=simpsons+characters&format=json"
     static let appName = "Simpsons Character Viewer"
 }
 
-// Using userDefault to persistant user data
+// Using userDefault to persistant user data, will be different if we want to show different default image and place holder for iphone and iPad
 let defaults = UserDefaults.standard
 let defaultImage =  UIImage(named: "defaultImage")
 let searchBarPlaceholder = "Search character"

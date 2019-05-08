@@ -9,25 +9,6 @@
 import Foundation
 import UIKit
 
-// Customize error with Enum
-enum CustomError: Error {
-    
-    case incorrectUrl
-    case fetchError
-    case parseError
-    
-    var localizedDescription: String {
-        switch self {
-        case .incorrectUrl:
-            return "Incorrect URL"
-        case .fetchError:
-            return "Error in fetching data"
-        case .parseError:
-            return "Error in parsing the data"
-        }
-    }
-}
-
 // Setup different API and app name
 struct AppConfiguration {
 

@@ -16,11 +16,11 @@ class UserViewModel {
     private var itemCount: Int = 0
     var searchText: String = ""
     
-    func getItems (completion: @escaping (Error?) -> ()){
-        APIHandler.sharedInstance.fetchUsers { array, error in
+    func getItems (completion: @escaping (CustomError?) -> ()){
+        APIHandler.sharedInstance.fetchUsers { [weak self] array, error in
             if error == nil {
-                self.userList = array
-                self.filteredUserList = array
+                self?.userList = array
+                self?.filteredUserList = array
                 completion(nil)
             }else{
                 completion(error)
@@ -50,7 +50,7 @@ class UserViewModel {
             filteredUserList = userList
         }else{
             filteredUserList = userList.filter({
-                $0.title?.uppercased().contains(searchText.uppercased()) ?? false
+                $0.title?.uppercased().contains(searchText.uppercased()) ?? false || $0.description?.uppercased().contains(searchText.uppercased()) ?? false
             })
         }
         itemCount = filteredUserList.count

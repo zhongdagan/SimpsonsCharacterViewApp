@@ -9,25 +9,43 @@
 import Foundation
 import Alamofire
 
+enum CustomError: Error {
+    
+    case incorrectUrl
+    case fetchError
+    case parseError
+    
+    var localizedDescription: String {
+        switch self {
+        case .incorrectUrl:
+            return "Incorrect URL"
+        case .fetchError:
+            return "Error in fetching data"
+        case .parseError:
+            return "Error in parsing the data"
+        }
+    }
+}
+
 class APIHandler {
     
     static let sharedInstance = APIHandler()
     
-    func fetchUsers(with completionHandler: @escaping ([User], Error?) -> ()) {
+    func fetchUsers(with completionHandler: @escaping ([User], CustomError?) -> ()) {
         var userList = [User]()
         if let url = URL(string: AppConfiguration.urlString) {
             Alamofire.request(url).responseJSON { response in
                 switch response.result {
                 case .success(let json):
-                    guard let json = json as? [String: Any], let relatedTopicsArray = json["RelatedTopics"] as? [[String: Any]] else { return completionHandler([],CustomError.parseError) }
+                    guard let json = json as? [String: Any], let relatedTopicsArray = json["RelatedTopics"] as? [[String: Any]] else { return completionHandler([], CustomError.parseError) }
                     for item in relatedTopicsArray {
-                        let text = item["Text"] as? String
+                        let text = item[Constant.text] as? String
                         let textTuple = self.getTitleAndDescription(text: text)
-                        let icon = item["Icon"] as? [String: String]
+                        let icon = item[Constant.icon] as? [String: String]
                         var user = User()
                         user.title = textTuple.0
                         user.description = textTuple.1
-                        user.imgURLString = icon?["URL"]
+                        user.imgURLString = icon?[Constant.url]
                         userList.append(user)
                     }
                     completionHandler(userList, nil)

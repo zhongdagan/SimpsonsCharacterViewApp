@@ -19,20 +19,14 @@ class DetailViewController: BaseViewControlller {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setup()
-    }
-    
-    // overall setup method
-    func setup() {
-
         setupTitle()
         setupUI()
     }
     
     func setupTitle() {
         // set the toolbar visiblility on different devices
-        let device = UIDevice.current.model
-        if device == "iPhone" {
+        let device = UIDevice.current.userInterfaceIdiom
+        if device == .phone {
             title = user?.title
         } else {
             title = ""

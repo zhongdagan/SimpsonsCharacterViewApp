@@ -15,6 +15,10 @@
 		9EF735572282367500529DA6 /* BaseViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF735552282367500529DA6 /* BaseViewControlller.swift */; };
 		A2645F82228240320028CACB /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2645F81228240320028CACB /* UserTableViewCell.swift */; };
 		A2F3BB68228271DA0096D459 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2645F81228240320028CACB /* UserTableViewCell.swift */; };
+		A2F3BB6F228346930096D459 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F3BB6E228346930096D459 /* Constant.swift */; };
+		A2F3BB70228347170096D459 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F3BB6E228346930096D459 /* Constant.swift */; };
+		A2F3BB7322834CC50096D459 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F3BB7222834CC50096D459 /* UIViewController+Extension.swift */; };
+		A2F3BB7422834E0A0096D459 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F3BB7222834CC50096D459 /* UIViewController+Extension.swift */; };
 		FC62417C224F1CB3005B65EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62417B224F1CB3005B65EA /* AppDelegate.swift */; };
 		FC62417E224F1CB3005B65EA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62417D224F1CB3005B65EA /* MasterViewController.swift */; };
 		FC624180224F1CB3005B65EA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62417F224F1CB3005B65EA /* DetailViewController.swift */; };
@@ -69,6 +73,8 @@
 		7E9CAFE3DE779DE1BC62B092 /* Pods-SimpsonsCharacterViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsCharacterViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpsonsCharacterViewer/Pods-SimpsonsCharacterViewer.release.xcconfig"; sourceTree = "<group>"; };
 		9EF735552282367500529DA6 /* BaseViewControlller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControlller.swift; sourceTree = "<group>"; };
 		A2645F81228240320028CACB /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		A2F3BB6E228346930096D459 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A2F3BB7222834CC50096D459 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		AC1F425A5D96F1F3A53E961E /* Pods-SimpsonsCharacterViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsCharacterViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpsonsCharacterViewerTests/Pods-SimpsonsCharacterViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		B186F8E27A20F9DFEFAB1160 /* Pods-SimpsonsCharacterViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsCharacterViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpsonsCharacterViewerUITests/Pods-SimpsonsCharacterViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BDE17B81CD451B563BA44EF4 /* Pods-WireCharacterViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WireCharacterViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-WireCharacterViewer/Pods-WireCharacterViewer.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +204,22 @@
 			path = ConfigurationFile;
 			sourceTree = "<group>";
 		};
+		A2F3BB6D228346710096D459 /* AppConstant */ = {
+			isa = PBXGroup;
+			children = (
+				A2F3BB6E228346930096D459 /* Constant.swift */,
+			);
+			path = AppConstant;
+			sourceTree = "<group>";
+		};
+		A2F3BB7122834C910096D459 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A2F3BB7222834CC50096D459 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		FC62416F224F1CB3005B65EA = {
 			isa = PBXGroup;
 			children = (
@@ -230,8 +252,10 @@
 				A2F3BAE222824B1B0096D459 /* ViewControllers */,
 				FC86D3332253BB1F00CD9E51 /* Storyboard */,
 				FC6241AC224F1D1D005B65EA /* CustomCell */,
+				A2F3BB7122834C910096D459 /* Extension */,
 				FC6241AF224F1DAF005B65EA /* WebService */,
 				A2F3BB69228296F40096D459 /* ConfigurationFile */,
+				A2F3BB6D228346710096D459 /* AppConstant */,
 				FC86D32922513A8500CD9E51 /* SupportingFiles */,
 			);
 			path = SimpsonsCharacterViewer;
@@ -621,6 +645,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F3BB7322834CC50096D459 /* UIViewController+Extension.swift in Sources */,
 				FC6241BC224F227F005B65EA /* User.swift in Sources */,
 				FC624180224F1CB3005B65EA /* DetailViewController.swift in Sources */,
 				FC6241C0224F254E005B65EA /* UserViewModel.swift in Sources */,
@@ -629,6 +654,7 @@
 				9EF735562282367500529DA6 /* BaseViewControlller.swift in Sources */,
 				FC6241B1224F1DDE005B65EA /* APIHandler.swift in Sources */,
 				FC86D3312253BA3000CD9E51 /* Welcome.swift in Sources */,
+				A2F3BB6F228346930096D459 /* Constant.swift in Sources */,
 				FC62417E224F1CB3005B65EA /* MasterViewController.swift in Sources */,
 				FC62417C224F1CB3005B65EA /* AppDelegate.swift in Sources */,
 			);
@@ -654,6 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F3BB7422834E0A0096D459 /* UIViewController+Extension.swift in Sources */,
 				FC9EBFDA224FADBC005BFD29 /* User.swift in Sources */,
 				FCFDDDF622710E7500F1101A /* Welcome.swift in Sources */,
 				A2F3BB68228271DA0096D459 /* UserTableViewCell.swift in Sources */,
@@ -662,6 +689,7 @@
 				FC9EBFDD224FADBC005BFD29 /* WireConfiguration.swift in Sources */,
 				9EF735572282367500529DA6 /* BaseViewControlller.swift in Sources */,
 				FC9EBFE0224FADBC005BFD29 /* APIHandler.swift in Sources */,
+				A2F3BB70228347170096D459 /* Constant.swift in Sources */,
 				FC9EBFE1224FADBC005BFD29 /* MasterViewController.swift in Sources */,
 				FC9EBFE2224FADBC005BFD29 /* AppDelegate.swift in Sources */,
 			);

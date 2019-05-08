@@ -41,20 +41,19 @@ class MasterViewController: BaseViewControlller {
     
     // Make web service call and reload collection view
     func setupAPI() {
-        viewModel?.getItems { error in
-            if error == nil {
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+        viewModel?.getItems { [weak self] error in
+            if let error = error {
+                self?.showGenericAlert(with: error.localizedDescription)
+            } else {
+                self?.tableView.reloadData()
             }
         }
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        self.tableView.reloadData()
     }
+    
 }
 
 // conform to SearchBar delegate protocol
@@ -63,9 +62,7 @@ extension MasterViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel?.searchText = searchText
         viewModel?.getFilteredCharacters()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        self.tableView.reloadData()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -82,15 +79,16 @@ extension MasterViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserTableViewCell, let viewModel = viewModel else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.userTableViewCell, for: indexPath) as? UserTableViewCell, let viewModel = viewModel else { return UITableViewCell() }
         
         cell.configureCell(viewModel: viewModel, rowNum: indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        guard let detailViewController = UIStoryboard(name: Constant.mainStoryboard, bundle: nil).instantiateViewController(withIdentifier: Constant.detailViewController) as? DetailViewController else { return }
         
+        // Directly passing the user data to detail view controller since it's a very small data pass. Will be good to have a view model for detail view controller
         detailViewController.user = viewModel?.getUserAt(index: indexPath.row)
         splitViewController?.showDetailViewController(detailViewController, sender: nil)
     }
