@@ -2,8 +2,8 @@
 //  SimpsonsCharacterViewerUITests.swift
 //  SimpsonsCharacterViewerUITests
 //
-//  Created by Dylan Tan on 3/29/19.
-//  Copyright © 2019 Dylan. All rights reserved.
+//  Created by Ethan Gan on 5/7/19.
+//  Copyright © 2019 Ethan Gan. All rights reserved.
 //
 
 import XCTest
@@ -11,19 +11,15 @@ import XCTest
 class SimpsonsCharacterViewerUITests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+        continueAfterFailure = true
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testDetailViewController() {
+        let app = XCUIApplication()
+        let tableQuerys = app.tables
+        tableQuerys.staticTexts["Apu Nahasapeemapetilon"].tap()
+        XCTAssertTrue(app.navigationBars["APU NAHASAPEEMAPETILON"].exists, "Didn't go to detail view controller")
     }
 
 }

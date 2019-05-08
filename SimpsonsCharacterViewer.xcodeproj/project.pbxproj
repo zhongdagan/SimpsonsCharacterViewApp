@@ -11,6 +11,10 @@
 		6105A0B56EDEFB92F5A4A2FA /* Pods_SimpsonsCharacterViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664477DE99F4412820FD7C0A /* Pods_SimpsonsCharacterViewerTests.framework */; };
 		6A133D020691ABC989D3FC5F /* Pods_WireCharacterViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164D5EC0A83ABEBF15F586E /* Pods_WireCharacterViewer.framework */; };
 		93DE9BB8D9FB34753C286ECB /* Pods_SimpsonsCharacterViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21BA0735B8C9079516E66194 /* Pods_SimpsonsCharacterViewerUITests.framework */; };
+		9EF735562282367500529DA6 /* BaseViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF735552282367500529DA6 /* BaseViewControlller.swift */; };
+		9EF735572282367500529DA6 /* BaseViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF735552282367500529DA6 /* BaseViewControlller.swift */; };
+		A2645F82228240320028CACB /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2645F81228240320028CACB /* UserTableViewCell.swift */; };
+		A2F3BB68228271DA0096D459 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2645F81228240320028CACB /* UserTableViewCell.swift */; };
 		FC62417C224F1CB3005B65EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62417B224F1CB3005B65EA /* AppDelegate.swift */; };
 		FC62417E224F1CB3005B65EA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62417D224F1CB3005B65EA /* MasterViewController.swift */; };
 		FC624180224F1CB3005B65EA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62417F224F1CB3005B65EA /* DetailViewController.swift */; };
@@ -23,20 +27,12 @@
 		FC6241B4224F1F03005B65EA /* SimpsonsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241B3224F1F03005B65EA /* SimpsonsConfiguration.swift */; };
 		FC6241BC224F227F005B65EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241BB224F227F005B65EA /* User.swift */; };
 		FC6241C0224F254E005B65EA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241BF224F254E005B65EA /* UserViewModel.swift */; };
-		FC6241C2224F364F005B65EA /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241C1224F364F005B65EA /* UserCollectionViewCell.swift */; };
-		FC86D321225124A100CD9E51 /* CollectionViewDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D320225124A100CD9E51 /* CollectionViewDelegateHandler.swift */; };
-		FC86D3232251266600CD9E51 /* CollectionViewDataSourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D3222251266600CD9E51 /* CollectionViewDataSourceHandler.swift */; };
-		FC86D3242251266600CD9E51 /* CollectionViewDataSourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D3222251266600CD9E51 /* CollectionViewDataSourceHandler.swift */; };
-		FC86D3282251334100CD9E51 /* CollectionViewDelegateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D320225124A100CD9E51 /* CollectionViewDelegateHandler.swift */; };
 		FC86D32F2252842300CD9E51 /* WireCharacterViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC86D32E2252842300CD9E51 /* WireCharacterViewer-Info.plist */; };
 		FC86D3312253BA3000CD9E51 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D3302253BA3000CD9E51 /* Welcome.swift */; };
-		FC86D3382253C38E00CD9E51 /* NOTES.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FC86D3372253C38D00CD9E51 /* NOTES.rtf */; };
-		FC86D3392253C38E00CD9E51 /* NOTES.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FC86D3372253C38D00CD9E51 /* NOTES.rtf */; };
 		FC9EBFDA224FADBC005BFD29 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241BB224F227F005B65EA /* User.swift */; };
 		FC9EBFDB224FADBC005BFD29 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62417F224F1CB3005B65EA /* DetailViewController.swift */; };
 		FC9EBFDC224FADBC005BFD29 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241BF224F254E005B65EA /* UserViewModel.swift */; };
 		FC9EBFDD224FADBC005BFD29 /* WireConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241B5224F1F19005B65EA /* WireConfiguration.swift */; };
-		FC9EBFDF224FADBC005BFD29 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241C1224F364F005B65EA /* UserCollectionViewCell.swift */; };
 		FC9EBFE0224FADBC005BFD29 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6241B0224F1DDE005B65EA /* APIHandler.swift */; };
 		FC9EBFE1224FADBC005BFD29 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62417D224F1CB3005B65EA /* MasterViewController.swift */; };
 		FC9EBFE2224FADBC005BFD29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC62417B224F1CB3005B65EA /* AppDelegate.swift */; };
@@ -71,6 +67,8 @@
 		664477DE99F4412820FD7C0A /* Pods_SimpsonsCharacterViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpsonsCharacterViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F609F3B06BE7B8D5973A3C /* Pods_SimpsonsCharacterViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpsonsCharacterViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9CAFE3DE779DE1BC62B092 /* Pods-SimpsonsCharacterViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsCharacterViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpsonsCharacterViewer/Pods-SimpsonsCharacterViewer.release.xcconfig"; sourceTree = "<group>"; };
+		9EF735552282367500529DA6 /* BaseViewControlller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControlller.swift; sourceTree = "<group>"; };
+		A2645F81228240320028CACB /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		AC1F425A5D96F1F3A53E961E /* Pods-SimpsonsCharacterViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsCharacterViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpsonsCharacterViewerTests/Pods-SimpsonsCharacterViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		B186F8E27A20F9DFEFAB1160 /* Pods-SimpsonsCharacterViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsCharacterViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpsonsCharacterViewerUITests/Pods-SimpsonsCharacterViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BDE17B81CD451B563BA44EF4 /* Pods-WireCharacterViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WireCharacterViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-WireCharacterViewer/Pods-WireCharacterViewer.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,12 +93,8 @@
 		FC6241B5224F1F19005B65EA /* WireConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireConfiguration.swift; sourceTree = "<group>"; };
 		FC6241BB224F227F005B65EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FC6241BF224F254E005B65EA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		FC6241C1224F364F005B65EA /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
-		FC86D320225124A100CD9E51 /* CollectionViewDelegateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegateHandler.swift; sourceTree = "<group>"; };
-		FC86D3222251266600CD9E51 /* CollectionViewDataSourceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceHandler.swift; sourceTree = "<group>"; };
 		FC86D32E2252842300CD9E51 /* WireCharacterViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WireCharacterViewer-Info.plist"; sourceTree = "<group>"; };
 		FC86D3302253BA3000CD9E51 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
-		FC86D3372253C38D00CD9E51 /* NOTES.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = NOTES.rtf; sourceTree = "<group>"; };
 		FC9EBFEE224FADBC005BFD29 /* WireCharacterViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WireCharacterViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9EBFF3225072CD005BFD29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC9EBFF4225072D0005BFD29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,10 +162,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A2F3BAE222824B1B0096D459 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC62417D224F1CB3005B65EA /* MasterViewController.swift */,
+				9EF735552282367500529DA6 /* BaseViewControlller.swift */,
+				FC62417F224F1CB3005B65EA /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A2F3BAE322824B240096D459 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC6241BF224F254E005B65EA /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A2F3BAE422824B320096D459 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC86D3302253BA3000CD9E51 /* Welcome.swift */,
+				FC6241BB224F227F005B65EA /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2F3BB69228296F40096D459 /* ConfigurationFile */ = {
+			isa = PBXGroup;
+			children = (
+				FC6241B2224F1EC0005B65EA /* WireConfiguration */,
+				FC9EBFF1224FB275005BFD29 /* SimpsonsConfiguration */,
+			);
+			path = ConfigurationFile;
+			sourceTree = "<group>";
+		};
 		FC62416F224F1CB3005B65EA = {
 			isa = PBXGroup;
 			children = (
-				FC86D3372253C38D00CD9E51 /* NOTES.rtf */,
 				FC62417A224F1CB3005B65EA /* SimpsonsCharacterViewer */,
 				FC624191224F1CB6005B65EA /* SimpsonsCharacterViewerTests */,
 				FC62419C224F1CB6005B65EA /* SimpsonsCharacterViewerUITests */,
@@ -196,13 +225,13 @@
 			isa = PBXGroup;
 			children = (
 				FC6241AB224F1D11005B65EA /* AppDelegate */,
-				FC86D3322253BA6300CD9E51 /* MVVM */,
-				FC9EBFF1224FB275005BFD29 /* SimpsonsConfiguration */,
-				FC6241B2224F1EC0005B65EA /* WireConfiguration */,
-				FC6241AC224F1D1D005B65EA /* CustomCell */,
-				FC86D31F2251247100CD9E51 /* CollectionViewDelegateDataSourceHanlder */,
-				FC6241AF224F1DAF005B65EA /* WebService */,
+				A2F3BAE422824B320096D459 /* Model */,
+				A2F3BAE322824B240096D459 /* ViewModel */,
+				A2F3BAE222824B1B0096D459 /* ViewControllers */,
 				FC86D3332253BB1F00CD9E51 /* Storyboard */,
+				FC6241AC224F1D1D005B65EA /* CustomCell */,
+				FC6241AF224F1DAF005B65EA /* WebService */,
+				A2F3BB69228296F40096D459 /* ConfigurationFile */,
 				FC86D32922513A8500CD9E51 /* SupportingFiles */,
 			);
 			path = SimpsonsCharacterViewer;
@@ -237,7 +266,7 @@
 		FC6241AC224F1D1D005B65EA /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				FC6241C1224F364F005B65EA /* UserCollectionViewCell.swift */,
+				A2645F81228240320028CACB /* UserTableViewCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -260,41 +289,6 @@
 			path = WireConfiguration;
 			sourceTree = "<group>";
 		};
-		FC6241BA224F2267005B65EA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FC6241BB224F227F005B65EA /* User.swift */,
-				FC86D3302253BA3000CD9E51 /* Welcome.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		FC6241BD224F244E005B65EA /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				FC6241BF224F254E005B65EA /* UserViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		FC6241BE224F245A005B65EA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FC62417D224F1CB3005B65EA /* MasterViewController.swift */,
-				FC62417F224F1CB3005B65EA /* DetailViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FC86D31F2251247100CD9E51 /* CollectionViewDelegateDataSourceHanlder */ = {
-			isa = PBXGroup;
-			children = (
-				FC86D320225124A100CD9E51 /* CollectionViewDelegateHandler.swift */,
-				FC86D3222251266600CD9E51 /* CollectionViewDataSourceHandler.swift */,
-			);
-			path = CollectionViewDelegateDataSourceHanlder;
-			sourceTree = "<group>";
-		};
 		FC86D32922513A8500CD9E51 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,16 +296,6 @@
 				FC624189224F1CB6005B65EA /* SimpsonsCharacterViewer-Info.plist */,
 			);
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		FC86D3322253BA6300CD9E51 /* MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				FC6241BD224F244E005B65EA /* ViewModel */,
-				FC6241BA224F2267005B65EA /* Model */,
-				FC6241BE224F245A005B65EA /* View */,
-			);
-			path = MVVM;
 			sourceTree = "<group>";
 		};
 		FC86D3332253BB1F00CD9E51 /* Storyboard */ = {
@@ -419,7 +403,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = DyCom;
+				ORGANIZATIONNAME = Ethan;
 				TargetAttributes = {
 					FC624177224F1CB3005B65EA = {
 						CreatedOnToolsVersion = 10.1;
@@ -464,7 +448,6 @@
 				FC624185224F1CB6005B65EA /* Assets.xcassets in Resources */,
 				FC624183224F1CB3005B65EA /* Main.storyboard in Resources */,
 				FC86D32F2252842300CD9E51 /* WireCharacterViewer-Info.plist in Resources */,
-				FC86D3382253C38E00CD9E51 /* NOTES.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +469,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC86D3392253C38E00CD9E51 /* NOTES.rtf in Resources */,
 				FC9EBFF6225072E9005BFD29 /* LaunchScreen.storyboard in Resources */,
 				FC9EBFF5225072D4005BFD29 /* Assets.xcassets in Resources */,
 				FC9EBFE9224FADBC005BFD29 /* Main.storyboard in Resources */,
@@ -639,14 +621,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC86D3232251266600CD9E51 /* CollectionViewDataSourceHandler.swift in Sources */,
 				FC6241BC224F227F005B65EA /* User.swift in Sources */,
 				FC624180224F1CB3005B65EA /* DetailViewController.swift in Sources */,
 				FC6241C0224F254E005B65EA /* UserViewModel.swift in Sources */,
+				A2645F82228240320028CACB /* UserTableViewCell.swift in Sources */,
 				FC6241B4224F1F03005B65EA /* SimpsonsConfiguration.swift in Sources */,
-				FC6241C2224F364F005B65EA /* UserCollectionViewCell.swift in Sources */,
+				9EF735562282367500529DA6 /* BaseViewControlller.swift in Sources */,
 				FC6241B1224F1DDE005B65EA /* APIHandler.swift in Sources */,
-				FC86D321225124A100CD9E51 /* CollectionViewDelegateHandler.swift in Sources */,
 				FC86D3312253BA3000CD9E51 /* Welcome.swift in Sources */,
 				FC62417E224F1CB3005B65EA /* MasterViewController.swift in Sources */,
 				FC62417C224F1CB3005B65EA /* AppDelegate.swift in Sources */,
@@ -675,12 +656,11 @@
 			files = (
 				FC9EBFDA224FADBC005BFD29 /* User.swift in Sources */,
 				FCFDDDF622710E7500F1101A /* Welcome.swift in Sources */,
+				A2F3BB68228271DA0096D459 /* UserTableViewCell.swift in Sources */,
 				FC9EBFDB224FADBC005BFD29 /* DetailViewController.swift in Sources */,
 				FC9EBFDC224FADBC005BFD29 /* UserViewModel.swift in Sources */,
 				FC9EBFDD224FADBC005BFD29 /* WireConfiguration.swift in Sources */,
-				FC86D3242251266600CD9E51 /* CollectionViewDataSourceHandler.swift in Sources */,
-				FC86D3282251334100CD9E51 /* CollectionViewDelegateHandler.swift in Sources */,
-				FC9EBFDF224FADBC005BFD29 /* UserCollectionViewCell.swift in Sources */,
+				9EF735572282367500529DA6 /* BaseViewControlller.swift in Sources */,
 				FC9EBFE0224FADBC005BFD29 /* APIHandler.swift in Sources */,
 				FC9EBFE1224FADBC005BFD29 /* MasterViewController.swift in Sources */,
 				FC9EBFE2224FADBC005BFD29 /* AppDelegate.swift in Sources */,
@@ -857,7 +837,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.DyCom.io.SimpsonsCharacterViewer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.io.SimpsonsCharacterViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -875,7 +855,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.DyCom.io.SimpsonsCharacterViewer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.io.SimpsonsCharacterViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

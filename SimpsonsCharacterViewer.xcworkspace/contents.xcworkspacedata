@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:README.rtf">
+   </FileRef>
+   <FileRef
       location = "group:SimpsonsCharacterViewer.xcodeproj">
    </FileRef>
    <FileRef

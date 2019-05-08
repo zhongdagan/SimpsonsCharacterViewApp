@@ -2,8 +2,8 @@
 //  SimpsonsCharacterViewerTests.swift
 //  SimpsonsCharacterViewerTests
 //
-//  Created by Dylan Tan on 3/29/19.
-//  Copyright © 2019 Dylan. All rights reserved.
+//  Created by Ethan Gan on 5/7/19.
+//  Copyright © 2019 Ethan Gan. All rights reserved.
 //
 
 import XCTest
@@ -12,16 +12,7 @@ import Alamofire
 
 class SimpsonsCharacterViewerTests: XCTestCase {
 
-    override func setUp() {
-        
-    }
-
-    override func tearDown() {
-        
-    }
-    
     func testSingletonAPIHandler() {
-        
         let object1 = APIHandler.sharedInstance
         let object2 = APIHandler.sharedInstance
         let otherReferenceToMyFirstObject = object2
@@ -30,30 +21,26 @@ class SimpsonsCharacterViewerTests: XCTestCase {
     }
     
     func testWebServiseCall(){
-        
-        let expect = expectation(description: "Check Web service call response from server.")
+        let expectation = XCTestExpectation(description: "Test API Call From Web service")
         if let url = URL(string: AppConfiguration.urlString) {
             Alamofire.request(url).responseJSON { (response) in
-                XCTAssertNil(response.error, (response.error?.localizedDescription)!)
+                XCTAssertNil(response.error, "API call failed")
                 XCTAssertNotNil(response.result, "Json parse failed.")
-                expect.fulfill()
+                expectation.fulfill()
             }
         }
-        waitForExpectations(timeout: 10) { (error) in
-            XCTAssertNil(error, (error?.localizedDescription)!)
-        }
+        wait(for: [expectation], timeout: 10.0)
     }
     
-    func testFirstItemInTheArray(){
-        let expect = expectation(description: "Check the value of the first item in the array")
-        APIHandler.sharedInstance.fetchUsers { (data, error) in
-            XCTAssertNil(error, "Unexpected error occured: \(String(describing: error?.localizedDescription))")
-            XCTAssertEqual((data[0].title)!, "Apu Nahasapeemapetilon")
-            expect.fulfill()
+    func testGetItemsInViewModel() {
+        let viewModel = UserViewModel()
+        let expectation = XCTestExpectation(description: "Test Get Items")
+        viewModel.getItems { error in
+            if error == nil {
+                expectation.fulfill()
+            }
         }
-        waitForExpectations(timeout: 10) { (error) in
-            XCTAssertNil(error, (error?.localizedDescription)!)
-        }
+        wait(for: [expectation], timeout: 10.0)
     }
 
 }
